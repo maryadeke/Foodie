@@ -1,0 +1,66 @@
+.flexbox-item{
+    width: 200px;
+    /* height: 50vh; */
+    margin: 30px;
+    border: 3px solid black;
+    background-color: bisque;
+}
+.flexbox-item-1{
+min-height: 100px;
+}
+.flexbox-item-2{
+    min-height: 200px;
+    }
+    .flexbox-item-3{
+        min-height: 300px;
+        }
+       .flexbox-container{
+        display: flex;
+        background-color: yellow;
+       }
+
+
+
+
+
+       .nav-items {
+        display: flex;
+        justify-content: flex-end; /* Align items to the end */
+        align-items: center; /* Align items vertically in the container */
+        background-color: yellow;
+        /* width: 40%;
+        box-sizing: border-box; */
+        padding: 20px;
+    }
+    
+    .nav-items > div {
+        margin-left: 20px; /* Add margin between nav items */
+    }
+    
+    .nav-items i {
+        color: red;
+    }
+    
+    .logo {
+        display: flex;
+        background-color: brown;
+        justify-content: center;
+        align-items: center; 
+       padding-left: 32px;
+       padding: 10px;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header{
+       background-color: grey;
+    } 
+
+
+
+
+
+    

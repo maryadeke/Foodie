@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body, html{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: antiquewhite;
+    height: 100vh;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #774430;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    
+}
+.image_div {
+    flex:1;
+    max-width: 50%;
+    padding: 20px;
+  
+}
+.image_div img{
+    width: 100%;
+    height: auto;
+}
+
+.login_container{
+    flex: 1;
+    padding: 20px;
+     background-color: #774430; 
+     max-height: 100%;
+     height: 100%;
+     overflow-y: auto;
+     box-sizing: border-box;
+    
+}
+.login_container h3{
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+.form-group{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(165, 116, 42);
+    border-radius: 5px;
+}
+.form-group button{
+    margin-top: 20px;
+    width: auto;
+    padding: 10px;
+    background-color: green;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+
+.form-group a{
+    color: antiquewhite;
+    margin-top: 20px;  
+    text-decoration: none;
+}
+
+.checkbox a{
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    color: antiquewhite ;
+}
+.checkbox p{
+    color: antiquewhite ;
+
+}
