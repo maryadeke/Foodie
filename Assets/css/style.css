@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 body, html{
    
@@ -19,7 +20,7 @@ body, html{
     background-color: #774430;
     border-radius: 10px;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     
 }
 .image_div {
@@ -47,6 +48,8 @@ body, html{
 display: flex;
 justify-content: center;
 margin-bottom: 20px;
+color: antiquewhite;
+font-size: 3.4vw;
 }
 .form-group{
     margin-bottom: 10px;
@@ -58,13 +61,14 @@ margin-bottom: 20px;
     padding: 10px;
     border: 1px solid rgb(165, 116, 42);
     border-radius: 5px;
+    outline: none;
 }
 .form-group button{
     margin-top: 20px;
     width: auto;
-    padding: 10px;
-    background-color: green;
-    color: black;
+    padding:  15px 45px;
+    background:linear-gradient(45deg,rgb(176, 114, 32),brown);
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -77,14 +81,22 @@ margin-bottom: 20px;
     margin-top: 20px;  
     text-decoration: none;
 }
+.checkbox{
+    display: flex;
+}
 
-.checkbox a{
+.checkbox a,.forgotPass{
     display: flex;
     justify-content: end;
     text-decoration: none;
-    color: antiquewhite ;
+    color: antiquewhite;
 }
 .checkbox p{
-    color: antiquewhite ;
+    color: antiquewhite;
 
+}
+.forgotPass:hover{
+    color: rgb(221, 177, 177);
+    text-decoration: underline;
+    transform: scale(0.9);
 }
