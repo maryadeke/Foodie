@@ -94,3 +94,49 @@ header {
   padding: 5px;
   border-radius: 20px;
 }
+
+
+/* cart css */
+.cart_container1{
+    position:relative;
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: red;
+    flex: 1;
+    height: 50vh;
+
+}
+.cart_container2{
+    /* position: relative; */
+    display: flex;
+    flex-direction:column;
+    background-color:#fcf3f3;
+    height: 50vh;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    display: flex;
+    background-color: green;
+    font-weight: 500;
+    padding: 15px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+.cart_container{
+    position: absolute;
+    margin-top: 80px;
+    display: flex;
+    /* background-color: blue; */
+    overflow: hidden;
+    border-radius:20px;
+}
+.cart_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
