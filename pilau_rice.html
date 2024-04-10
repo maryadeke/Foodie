@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/content.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <title>pilau Rice</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <p>FOODIE</p>
+      </div>
+      <div class="nav-items">
+        <div class="nav-items-home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-items-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Cart</span>
+        </div>
+        <div class="nav-items-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="cart_container" id="cart_container">
+    <div class="cart_container1">
+      <img id="item_image" src="./images/brown_rice.jpg" alt="Brown Rice" />
+    </div>
+    <div class="cart_container2">
+      <p id="item_name"></p>
+      <p id="item_weight"></p>
+      <p id="item_price"></p>
+      <button type="submit" id="buttonContent" onclick="toggle()">ADD TO CART</button>
+    </div>
+  </div>
+  <div class="popup">
+    <p id="popup_message">ITEM ADDED TO CART SUCCESSFULLY</p>
+  </div>
+  <script src="./js/popup.js"></script>
+</body>
+</html>

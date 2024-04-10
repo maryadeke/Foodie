@@ -34,3 +34,25 @@ function toggle() {
         button.textContent = originalText;
     }, 5000);
 }
+
+//
+function populateContent(imageSrc, itemName, itemWeight, itemPrice) {
+    // Update the image source
+    document.getElementById("item_image").src = imageSrc;
+    
+    // Update the item name
+    document.getElementById("item_name").textContent = itemName;
+    
+    // Update the item weight
+    document.getElementById("item_weight").textContent = itemWeight;
+    
+    // Update the item price
+    document.getElementById("item_price").textContent = itemPrice;
+  }
+  
+  // Example usage
+populateContent("./images/brown_rice.jpg", "Brown Rice", "80g", "Ugx 7000");
+populateContent("./images/yellow_rice.jpg", "yellow Rice", "80g", "Ugx 8500");
+populateContent("./images/pilau_rice.jpg", "Pilau Rice", "80g", "Ugx 9000");
+populateContent("./images/egg_rice.jpg", "Egg Rice", "80g", "Ugx 6500");
+populateContent("./images/basmatti.jpg", "Basmatti Rice", "80g", "Ugx 10000");
