@@ -1,8 +1,7 @@
-
-
 // Retrieve the popup element by its class name
 const popup = document.querySelector('.popup');
 const button = document.getElementById('buttonContent');
+
 
 // Function to toggle the visibility of the popup
 function toggle() {
