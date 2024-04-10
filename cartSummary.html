@@ -1,33 +1,41 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/content.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <div class="personalInfo">
-            <p>Personal informaton</p>
-        <form action="">
-            <div class="form-group">
-                <span>Name</span>
-                <input type="text" name="name" id="name" >
+            <p>Personal information</p>
+            <form action="#">
+                <div class="form-group">
+                    <span>Name</span>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <span>Address</span>
+                    <input type="text" name="address" id="address">
+                </div>
+            </form>
+            <div class="items">
+                <span>Cart information</span>
             </div>
-            <div class="form-group">
-                <span>Address</span>
-                <input type="text" name="address" id="address" >
-               
-            </div>
-        </form>
-            <span>cart information</span>
         </div>
         <div class="summary">
             <h3>Cart summary</h3>
-           <p>sub total: UGX</p> 
-           <button type="submit">CHECKOUT(UGX:)</button>
+            <p>Subtotal: UGX</p>
+            <div id="checkout">
+                <button type="submit">CHECKOUT (UGX:)</button>
+            </div>
+
         </div>
     </div>
 </body>
+
 </html>

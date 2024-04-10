@@ -168,3 +168,76 @@ button{
     display: block; /* Show the popup when the 'show' class is added */
   }
   
+
+
+
+  /* cart summary page css */
+  .personalInfo{
+    background-color:white;
+    
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    height: 100vh;
+    width: 50%;
+    margin-top: 20px; /* Add margin to separate from header */
+  }
+  .items{
+    background-color: red;
+  }
+  .summary{
+   
+    display: flex;
+    background-color: yellow;
+    flex-direction: column;
+    flex: 1;
+    
+    height: 45vh;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    
+    width: 50%;
+    
+    
+  }
+ #checkout{
+  display: flex;
+    background-color: red;
+    font-weight: 500;
+    padding: 15px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+
+
+/* Additional CSS for form alignment */
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group span {
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Media query for smaller screens */
+/* @media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .personalInfo,
+    .summary {
+        width: 100%;
+    }
+} */
