@@ -254,9 +254,6 @@ h2{
   justify-content: center;
   align-items: center;
 }
-hr{
-  
-}
 
 
 
@@ -285,8 +282,8 @@ hr{
 
 /* Label styles */
 .label {
-  font-size: 14px;
-  margin-top: 10px; /* Add space between the dot and the label */
+  font-size: 20px;
+  margin-top: 8em; /* Add space between the dot and the label */
 }
 
 /* Progress line styles */
