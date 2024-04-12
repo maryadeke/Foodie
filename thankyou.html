@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <p>FOODIE</p>
+            </div>
+            <div class="nav-items">
+                <div class="nav-items-home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="nav-items-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                </div>
+                <div class="nav-items-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="order-container">
+        <h2>YOUR ORDER HAS BEEN CONFIRMED</h2>
+        <h2>Please wait as we deliver your food</h2>
+
+        <div class="progress-bar">
+            <div class="progress-step" id="step-confirmed">
+                <span class="dot"></span>
+                <span class="label">Order Confirmed</span>
+            </div>
+            <div class="progress-step" id="step-prepared">
+                <span class="dot"></span>
+                <span class="label">Order Prepared</span>
+            </div>
+            <div class="progress-step" id="step-delivered">
+                <span class="dot"></span>
+                <span class="label">Order Delivered</span>
+            </div>
+        </div>
+
+        <hr class="progress-line">
+    </div>
+</body>
+</html>
