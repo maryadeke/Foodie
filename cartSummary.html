@@ -5,12 +5,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./css/content.css">
+    
+    <!-- <link rel="stylesheet" href="/css/cartSummary.css"> -->
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <p>FOODIE</p>
+            </div>
+            <div class="nav-items">
+                <div class="nav-items-home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="nav-items-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                </div>
+                <div class="nav-items-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="kcontainer">
         <div class="personalInfo">
             <p>Personal information</p>
             <form action="#">
@@ -25,14 +50,24 @@
             </form>
             <div class="items">
                 <span>Cart information</span>
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                      <img class="fimage" src="/images/white_rice.jpg" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <p>white rice @ UGX :</p>
+                      <p></p>
+
+                    </div>
+                  </div>
             </div>
         </div>
         <div class="summary">
             <h3>Cart summary</h3>
             <p>Subtotal: UGX</p>
-            <div id="checkout">
-                <button type="submit">CHECKOUT (UGX:)</button>
-            </div>
+            
+                <button type="submit" class="checkout">CHECKOUT (UGX:)</button>
+            
 
         </div>
     </div>

@@ -119,6 +119,7 @@ header {
 button{
     display: flex;
     background-color: green;
+    border-radius: 10px;
     font-weight: 500;
     padding: 15px;
     width: 50%;
@@ -173,7 +174,7 @@ button{
 
   /* cart summary page css */
   .personalInfo{
-    background-color:white;
+    background-color:antiquewhite;
     
     align-items: center;
     justify-content: center;
@@ -183,16 +184,17 @@ button{
     margin-top: 20px; /* Add margin to separate from header */
   }
   .items{
-    background-color: red;
-  }
-  .summary{
    
+  }
+  
+  .summary{
+   margin-top: 20px;
     display: flex;
-    background-color: yellow;
+    background-color:bisque;
     flex-direction: column;
     flex: 1;
     
-    height: 45vh;
+    height: 30vh;
     margin-left: 10px;
     justify-content: center;
     align-items: center;
@@ -201,16 +203,19 @@ button{
     
     
   }
- #checkout{
-  display: flex;
-    background-color: red;
-    font-weight: 500;
-    padding: 15px;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
-}
+  .kcontainer{
+    display: flex;
+    background-color: #774430;
+  }
+  .fimage{
+    width: calc(33.33% - 20px);
+    margin: 10px 10px 30px 10px;
+  }
+  
+  .d-flex{
+    background-color: white;
+  }
+
 
 
 /* Additional CSS for form alignment */
@@ -231,7 +236,7 @@ input[type="text"] {
 }
 
 /* Media query for smaller screens */
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         width: 90%;
     }
@@ -240,4 +245,4 @@ input[type="text"] {
     .summary {
         width: 100%;
     }
-} */
+}
