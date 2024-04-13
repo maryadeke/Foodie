@@ -183,9 +183,7 @@ button{
     width: 50%;
     margin-top: 20px; /* Add margin to separate from header */
   }
-  .items{
-   
-  }
+ 
   
   .summary{
    margin-top: 20px;
@@ -254,9 +252,6 @@ h2{
   justify-content: center;
   align-items: center;
 }
-
-
-
 
 .order-container {
   text-align: center;
