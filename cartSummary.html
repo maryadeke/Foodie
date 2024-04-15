@@ -38,42 +38,97 @@
     </header>
     <div class="kcontainer">
         <div class="personalInfo">
-            <p>Personal information</p>
+            <!-- <p>Personal information</p> -->
             <form action="#">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <span>Name</span>
                     <input type="text" name="name" id="name">
                 </div>
                 <div class="form-group">
                     <span>Address</span>
                     <input type="text" name="address" id="address">
-                </div>
+                </div> -->
             </form>
             <div class="items">
                 <span>Cart information</span>
-                <div id="cart-info-container"></div>
+                <div id="cart-info-container">
+                    
+                </div>
                 <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                      <img class="fimage" src="" alt="...">
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <p> @ UGX :</p>
-                      <p></p>
-
-                    </div>
+                    
+                    
                   </div>
             </div>
         </div>
-        <div class="summary">
+        <div class="cart-summary">
             <h3>Cart summary</h3>
-            <p>Subtotal: UGX</p>
-            
-                <button type="submit" class="checkout">CHECKOUT (UGX:)</button>
-            
-
+            <div id="cart-info-container"></div> <!-- Container for cart items -->
+            <div class="cart-subtotal">
+                <p>Subtotal: UGX <span id="cart-subtotal">0</span></p> <!-- Subtotal -->
+            </div>
+            <button type="submit" class="checkout">CHECKOUT</button>
         </div>
+        <!-- <button id="clearCartButton">Clear Cart</button> -->
+
+        
     </div>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve cart data from local storage
+    const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartInfoContainer = document.querySelector('#cart-info-container');
+    
+    // Iterate through the cart data and create uniform item elements
+    cartData.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('cart-item');
+        
+        productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" />
+            <div>
+                <p>${product.name}</p>
+                <p>Price: ${product.price}</p>
+            </div>
+        `;
+        
+        cartInfoContainer.appendChild(productElement);
+    });
+
+    // Calculate subtotal and update the page
+    const subtotal = cartData.reduce((total, product) => total + parseFloat(product.price.replace('UGX ', '')), 0);
+    document.querySelector('#cart-subtotal').textContent = subtotal.toFixed(2);
+});
+// // Select the clear cart button
+// const clearCartButton = document.getElementById('clearCartButton');
+
+// // Add an event listener to handle the button click
+// clearCartButton.addEventListener('click', function() {
+//     // Clear the entire local storage
+//     localStorage.clear();
+
+//     // Update the page to reflect the cleared cart
+//     // Reset quantity element to 0
+//     const quantityElement = document.querySelector('.quantity');
+//     quantityElement.textContent = '0';
+
+//     // Clear the cart information container
+//     const cartInfoContainer = document.querySelector('#cart-info-container');
+//     cartInfoContainer.innerHTML = '';
+
+//     // Reset the subtotal in the cart summary
+//     const subtotalElement = document.querySelector('.summary p');
+//     subtotalElement.textContent = 'Subtotal: UGX 0.00';
+
+//     // Optionally, provide feedback to the user that the cart has been cleared
+//     alert('Cart has been cleared');
+// });
+
+    
+
+    </script>
     <script src="./js/app.js"></script>
+    
+    
 </body>
 
 </html>

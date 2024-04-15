@@ -182,7 +182,7 @@ button{
     align-items: center;
     justify-content: center;
     padding: 30px;
-    height: 100vh;
+    height: 200vh;
     width: 50%;
     margin-top: 20px; /* Add margin to separate from header */
   }
@@ -213,9 +213,7 @@ button{
     margin: 10px 10px 30px 10px;
   }
   
-  .d-flex{
-    background-color: white;
-  }
+  
 
 
 
@@ -348,3 +346,58 @@ header .nav-items-cart .quantity{
   width: 100%;
   }
 } */
+
+.cart-summary  {
+  margin-top: 20px;
+  display: flex;
+  background-color:bisque;
+  flex-direction: column;
+  flex: 1;
+  
+  height: 30vh;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  
+  width: 50%;
+}
+
+#cart-info-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Use one column for each item */
+  gap: 10px; /* Space between items */
+  flex-grow: inherit;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item div {
+  flex-grow: 1;
+}
+
+.cart-subtotal {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.checkout {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
