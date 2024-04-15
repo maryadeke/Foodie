@@ -300,3 +300,8 @@ h2{
   top: 0; /* Adjust to align the dot to the top of the progress line */
   transform: translateY(-50%);
 }
+.progress-bar .label{
+/* padding: 10px; */
+/* margin: 2em; */
+margin-top: 5em;
+}
