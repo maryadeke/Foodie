@@ -10,6 +10,26 @@
     <link rel="stylesheet" href="./css/content.css">
     
     <!-- <link rel="stylesheet" href="/css/cartSummary.css"> -->
+    <style>
+        /* CSS styles for plus and minus buttons */
+        .plus-button, .minus-button {
+            font-size: 14px; /* Adjust font size as needed */
+            width: 25px; /* Adjust width as needed */
+            height: 25px; /* Adjust height as needed */
+            padding: 5px; /* Adjust padding as needed */
+            margin: 5px; /* Add margin around buttons */
+            background-color: #f0f0f0; /* Optional: Button background color */
+            border: 1px solid #ccc; /* Optional: Button border */
+            border-radius: 50%; /* Optional: Make the button circular */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        /* Optional: Styling for when the button is hovered */
+        .plus-button:hover, .minus-button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+
     <title>Document</title>
 </head>
 
@@ -73,31 +93,92 @@
         
     </div>
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve cart data from local storage
+   document.addEventListener('DOMContentLoaded', function() {
     const cartData = JSON.parse(localStorage.getItem('cart')) || [];
     const cartInfoContainer = document.querySelector('#cart-info-container');
     
-    // Iterate through the cart data and create uniform item elements
-    cartData.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.classList.add('cart-item');
+    function refreshCartDisplay() {
+        // Clear the existing cart display
+        cartInfoContainer.innerHTML = '';
         
-        productElement.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" />
-            <div>
-                <p>${product.name}</p>
-                <p>Price: ${product.price}</p>
-            </div>
-        `;
+        // Iterate through the cart data and create item elements
+        cartData.forEach((product, index) => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('cart-item');
+            
+            // Create quantity display
+            const quantityElement = document.createElement('span');
+            quantityElement.classList.add('quantity-display');
+            quantityElement.textContent = product.quantity;
+            
+            // Create plus and minus buttons
+            const plusButton = document.createElement('button');
+            plusButton.textContent = '+';
+            plusButton.classList.add('plus-button');
+            
+            const minusButton = document.createElement('button');
+            minusButton.textContent = '-';
+            minusButton.classList.add('minus-button');
+            
+            // Add event listeners to the buttons
+            plusButton.addEventListener('click', () => updateQuantity(index, 'plus'));
+            minusButton.addEventListener('click', () => updateQuantity(index, 'minus'));
+            
+            // Add HTML structure for each item
+            productElement.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" />
+                <div>
+                    <p>${product.name}</p>
+                    <p>Price: ${product.price}</p>
+                </div>
+            `;
+            
+            // Append buttons and quantity display to productElement
+            productElement.appendChild(minusButton);
+            productElement.appendChild(quantityElement);
+            productElement.appendChild(plusButton);
+            
+            // Append productElement to cartInfoContainer
+            cartInfoContainer.appendChild(productElement);
+        });
+    }
+    
+    function updateQuantity(index, action) {
+        // Update the product quantity based on the action
+        const product = cartData[index];
         
-        cartInfoContainer.appendChild(productElement);
-    });
-
-    // Calculate subtotal and update the page
-    const subtotal = cartData.reduce((total, product) => total + parseFloat(product.price.replace('UGX ', '')), 0);
-    document.querySelector('#cart-subtotal').textContent = subtotal.toFixed(2);
+        if (action === 'plus') {
+            product.quantity += 1; // Increment quantity
+        } else if (action === 'minus' && product.quantity > 0) {
+            product.quantity -= 1; // Decrement quantity
+        }
+        
+        // Save the updated cart data to local storage
+        localStorage.setItem('cart', JSON.stringify(cartData));
+        
+        // Refresh the cart display and update the subtotal
+        refreshCartDisplay();
+        updateSubtotal(cartData);
+    }
+    
+    function updateSubtotal(cartData) {
+        const subtotal = cartData.reduce((total, product) => {
+            const price = parseFloat(product.price.replace('UGX', '').trim());
+            const quantity = product.quantity;
+            return total + (price * quantity);
+        }, 0);
+        
+        // Display the subtotal in the cart summary section
+        document.querySelector('#cart-subtotal').textContent = `UGX ${subtotal.toFixed(2)}`;
+    }
+    
+    // Initial cart display and subtotal update
+    refreshCartDisplay();
+    updateSubtotal(cartData);
 });
+
+
+
 // // Select the clear cart button
 // const clearCartButton = document.getElementById('clearCartButton');
 
