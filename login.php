@@ -21,12 +21,12 @@
             <div class="form-group">
                 <input type="text" name="password" id="password" placeholder="Password" required autocomplete="off">
             </div>
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <input type="checkbox" name="checkbox" id="" required autocomplete="off">
                 <p>Remember me</p>
                 <a href="#">Forgot password?</a>
             
-            </div>
+            </div> -->
                 
             <div class="form-group">
                 <button type="submit" name="Loginval">SUBMIT</button>
