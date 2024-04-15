@@ -305,3 +305,17 @@ h2{
 /* margin: 2em; */
 margin-top: 5em;
 }
+
+header .nav-items-cart .quantity{
+  display: flex;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  position: absolute;
+   top: 20px; 
+  left: 79%; 
+  padding: 3px 8px;
+}
