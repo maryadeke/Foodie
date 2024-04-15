@@ -14,7 +14,7 @@
         </div>
         <div class="login_container">
             <h3>SIGN UP</h3>
-           <form action="#" method="post">
+           <form action="./Assets/regiVal.php" method="post">
             <div class="form-group">
                 <input type="text" name="email" id="email" placeholder="Email">
             </div>
@@ -22,10 +22,10 @@
                 <input type="text" name="username" id="username" placeholder="User name">
             </div>
             <div class="form-group">
-                <input type="text" name="password" id="password" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password">
             </div>
             <div class="form-group">
-                <button type="submit">SUBMIT</button>
+                <button type="submit" name="UserRegister">Register</button>
             </div>
            </form>
         </div>
