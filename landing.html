@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Layout</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your CSS -->
+    <!-- <link rel="stylesheet" href="./css/content.css"> -->
+</head>
+
+<body>
+    <style>
+.flex-cont-7 {
+  padding: 15px; /* Optional: Add padding for space inside the text container */
+  border: 1px solid #ccc; /* Optional: Add a border for visibility */
+  background-color: pink;
+  color: black;
+  font-weight: 900;
+  text-align: center; /*
+  box-sizing: border-box; /* Ensure padding and border are included in element size */
+}
+body {
+    
+  background-color: #774430;
+  
+}
+    </style>
+    <div class="container">
+        <!-- First row with three image containers and the text content below the middle image -->
+        <div class="row no-gutters">
+            <!-- First column (image) -->
+            <div class="col-md-5">
+                <img src="/images/brown_rice.jpg" class="rounded img-fluid" alt="First image">
+            </div>
+            <!-- Middle column (smaller image and text container below) -->
+            <div class="col-md-2 d-flex flex-column">
+                <img src="/images/egg_rice.jpg" class="rounded img-fluid" alt="Middle image">
+                <!-- Text container -->
+                <div class="flex-cont-7">
+                    <p>FOODIE</p>
+                    <p>"we deliver"</p>
+                </div>
+            </div>
+            <!-- Third column (image) -->
+            <div class="col-md-5">
+                <img src="/images/baked_meat.jpg" class="rounded img-fluid" alt="Third image">
+            </div>
+        </div>
+
+        <!-- Second row with three image containers -->
+        <div class="row no-gutters">
+            <!-- First column (image) -->
+            <div class="col-md-5">
+                <img src="/images/brown_rice.jpg" class="rounded img-fluid" alt="First image">
+            </div>
+            <!-- Middle column (smaller image below the text content) -->
+            <div class="col-md-2">
+                <img src="/images/egg_rice.jpg" class="rounded img-fluid" alt="Middle image">
+            </div>
+            <!-- Third column (image) -->
+            <div class="col-md-5">
+                <img src="/images/baked_meat.jpg" class="rounded img-fluid" alt="Third image">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

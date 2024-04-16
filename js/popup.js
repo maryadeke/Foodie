@@ -62,16 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 // Retrieve the popup element by its class name
 const popup = document.querySelector('.popup');
 const button = document.getElementById('buttonContent');
@@ -217,66 +207,6 @@ function toggle3() {
 
 
 
-// //for incrementing
-//   // Function to increment the quantity
-//   function incrementQuantity() {
-//     // Get the quantity element
-//     const quantityElement = document.querySelector('.quantity');
-    
-//     // Get the current quantity value and parse it to an integer
-//     let currentQuantity = parseInt(quantityElement.textContent, 10);
-    
-//     // Increment the quantity
-//     currentQuantity += 1;
-    
-//     // Update the quantity element with the new value
-//     quantityElement.textContent = currentQuantity;
-// }
-
-// // Add an event listener to the "Add to Cart" button
-// const addToCartButton = document.getElementById('buttonContent');
-// addToCartButton.addEventListener('click', incrementQuantity);
-
-
-
-// function incrementQuantity() {
-//     // Get the quantity element
-//     const quantityElement = document.querySelector('.quantity');
-    
-//     // Retrieve the current quantity from localStorage
-//     let currentQuantity = parseInt(localStorage.getItem('cartQuantity'), 10);
-    
-//     // If there is no current quantity stored, default to 0
-//     if (isNaN(currentQuantity)) {
-//         currentQuantity = 0;
-//     }
-
-//     // Increment the quantity
-//     currentQuantity += 1;
-    
-//     // Update the quantity element with the new value
-//     quantityElement.textContent = currentQuantity;
-    
-//     // Save the updated quantity to localStorage
-//     localStorage.setItem('cartQuantity', currentQuantity);
-// }
-
-// // When the page loads, retrieve the current quantity from localStorage and update the page
-// window.addEventListener('DOMContentLoaded', function() {
-//     // Get the quantity element
-//     const quantityElement = document.querySelector('.quantity');
-    
-//     // Retrieve the current quantity from localStorage
-//     let currentQuantity = parseInt(localStorage.getItem('cartQuantity'), 10);
-    
-//     // If there is no current quantity stored, default to 0
-//     if (isNaN(currentQuantity)) {
-//         currentQuantity = 0;
-//     }
-    
-//     // Update the quantity element with the stored value
-//     quantityElement.textContent = currentQuantity;
-// });
 
   
 
