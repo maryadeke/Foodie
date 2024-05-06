@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap Layout</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Your CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="./css/content.css"> -->
-</head>
-
-<body>
-    <style>
-.flex-cont-7 {
-  padding: 15px; /* Optional: Add padding for space inside the text container */
-  border: 1px solid #ccc; /* Optional: Add a border for visibility */
-  background-color: pink;
-  color: black;
-  font-weight: 900;
-  text-align: center; /*
-  box-sizing: border-box; /* Ensure padding and border are included in element size */
-}
-body {
     
-  background-color: #774430;
-  
-}
-    </style>
-    <div class="container">
-        <!-- First row with three image containers and the text content below the middle image -->
-        <div class="row no-gutters">
-            <!-- First column (image) -->
-            <div class="col-md-5">
-                <img src="/images/brown_rice.jpg" class="rounded img-fluid" alt="First image">
-            </div>
-            <!-- Middle column (smaller image and text container below) -->
-            <div class="col-md-2 d-flex flex-column">
-                <img src="/images/egg_rice.jpg" class="rounded img-fluid" alt="Middle image">
-                <!-- Text container -->
-                <div class="flex-cont-7">
-                    <p>FOODIE</p>
-                    <p>"we deliver"</p>
-                </div>
-            </div>
-            <!-- Third column (image) -->
-            <div class="col-md-5">
-                <img src="/images/baked_meat.jpg" class="rounded img-fluid" alt="Third image">
-            </div>
-        </div>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 0;
+            background-color: bisque;
+        }
 
-        <!-- Second row with three image containers -->
-        <div class="row no-gutters">
-            <!-- First column (image) -->
-            <div class="col-md-5">
-                <img src="/images/brown_rice.jpg" class="rounded img-fluid" alt="First image">
-            </div>
-            <!-- Middle column (smaller image below the text content) -->
-            <div class="col-md-2">
-                <img src="/images/egg_rice.jpg" class="rounded img-fluid" alt="Middle image">
-            </div>
-            <!-- Third column (image) -->
-            <div class="col-md-5">
-                <img src="/images/baked_meat.jpg" class="rounded img-fluid" alt="Third image">
-            </div>
-        </div>
+        .container {
+            position: relative;
+           
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .get-started-button {
+            position: absolute;
+            top: 88%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .get-started-button a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./images/pic.jpg" alt="landing_pic">
+  <button class="get-started-button" type="submit"  >  <a href="./signup.html">Get Started</a></button>
+        
     </div>
 </body>
-
 </html>

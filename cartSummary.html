@@ -42,11 +42,11 @@
             <div class="nav-items">
                 <div class="nav-items-home">
                     <i class="fas fa-home"></i>
-                    <a href="/home.html"><span>Home</span></a>
+                    <a href="/foodie/home.html"><span>Home</span></a>
                 </div>
                 <div class="nav-items-cart">
                     <i class="fas fa-shopping-cart"></i>
-                    <a href="./cartSummary.html">Cart</a>
+                    <a href="/foodie/cartSummary.html">Cart</a>
                     <span class="quantity">0</span>
                 </div>
                 <div class="nav-items-search">
@@ -86,7 +86,7 @@
             <div class="cart-subtotal">
                 <p>Subtotal: <span id="cart-subtotal">0</span></p> <!-- Subtotal -->
             </div>
-            <button type="submit" class="checkout">CHECKOUT</button>
+            <button type="submit"  class="checkout"><a style="text-decoration: none; color: white;" href="./payments.html">CHECKOUT</a></button>
         </div>
         <!-- <button id="clearCartButton">Clear Cart</button> -->
 
@@ -162,15 +162,34 @@
     }
     
     function updateSubtotal(cartData) {
-        const subtotal = cartData.reduce((total, product) => {
-            const price = parseFloat(product.price.replace('UGX', '').trim());
-            const quantity = product.quantity;
-            return total + (price * quantity);
-        }, 0);
-        
-        // Display the subtotal in the cart summary section
-        document.querySelector('#cart-subtotal').textContent = `UGX ${subtotal.toFixed(2)}`;
+    const subtotal = cartData.reduce((total, product) => {
+        // Parse price and quantity, and ensure they are valid numbers
+        const price = parseFloat(product.price.replace('UGX', '').trim());
+        const quantity = parseInt(product.quantity); // Parse quantity
+        if (isNaN(price) || isNaN(quantity) || quantity < 0) {
+            console.error(`Invalid price or quantity for product: ${product.name}`);
+            return total;
+        }
+        return total + (price * quantity);
+    }, 0);
+    
+    // Check if subtotal is NaN
+    if (isNaN(subtotal)) {
+        console.error("Subtotal calculation resulted in NaN");
+        return;
     }
+    
+    // Display the subtotal in the cart summary section
+    document.querySelector('#cart-subtotal').textContent = `UGX ${subtotal.toFixed(2)}`;
+}
+cartData.forEach((product, index) => {
+    // Log product data for debugging
+    console.log(`Product ${index + 1}:`, product);
+
+    // Remaining code...
+});
+
+
     
     // Initial cart display and subtotal update
     refreshCartDisplay();
@@ -179,30 +198,58 @@
 
 
 
-// // Select the clear cart button
-// const clearCartButton = document.getElementById('clearCartButton');
+//  // Select the clear cart button
+//  const clearCartButton = document.getElementById('clearCartButton');
 
-// // Add an event listener to handle the button click
-// clearCartButton.addEventListener('click', function() {
+//  // Add an event listener to handle the button click
+//  clearCartButton.addEventListener('click', function() {
 //     // Clear the entire local storage
 //     localStorage.clear();
 
-//     // Update the page to reflect the cleared cart
+//      // Update the page to reflect the cleared cart
 //     // Reset quantity element to 0
-//     const quantityElement = document.querySelector('.quantity');
+//      const quantityElement = document.querySelector('.quantity');
 //     quantityElement.textContent = '0';
 
 //     // Clear the cart information container
-//     const cartInfoContainer = document.querySelector('#cart-info-container');
-//     cartInfoContainer.innerHTML = '';
+//      const cartInfoContainer = document.querySelector('#cart-info-container');
+//      cartInfoContainer.innerHTML = '';
 
-//     // Reset the subtotal in the cart summary
-//     const subtotalElement = document.querySelector('.summary p');
-//     subtotalElement.textContent = 'Subtotal: UGX 0.00';
+//      // Reset the subtotal in the cart summary
+//      const subtotalElement = document.querySelector('.summary p');
+//      subtotalElement.textContent = 'Subtotal: UGX 0.00';
 
-//     // Optionally, provide feedback to the user that the cart has been cleared
-//     alert('Cart has been cleared');
-// });
+//    // Optionally, provide feedback to the user that the cart has been cleared
+//      alert('Cart has been cleared');
+//  });
+
+
+
+// // Function to send cart data to the backend
+// function sendCartDataToBackend(cartData) {
+//     fetch('menuProcess.php', { // Updated endpoint URL
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(cartData)
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//             return response.text();
+//         }
+//         throw new Error('Network response was not ok.');
+//     })
+//     .then(data => {
+//         console.log(data); // Log server response
+//         // Optionally, handle success message or perform additional actions
+//     })
+//     .catch(error => {
+//         console.error('Error:', error);
+//         // Handle error condition
+//     });
+// }
+
 
     
 

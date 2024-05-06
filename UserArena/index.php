@@ -6,6 +6,6 @@
     <title>Continue Shopping!</title>
 </head>
 <body>
-    <?php require "../chicken.html"; ?>
+    <?php require "../home.html"; ?>
 </body>
 </html>

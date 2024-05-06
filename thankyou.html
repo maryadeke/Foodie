@@ -17,16 +17,18 @@
             <div class="nav-items">
                 <div class="nav-items-home">
                     <i class="fas fa-home"></i>
-                    <a href="/home.html"><span>Home</span></a>
+                    <a href="/foodie/home.html"><span>Home</span></a>
                 </div>
                 <div class="nav-items-cart">
                     <i class="fas fa-shopping-cart"></i>
-                    <a href="./cartSummary.html">Cart</a>
+                    <a href="/foodie/cartSummary.html">Cart</a>
+                    <span class="quantity">0</span>
                 </div>
-                <div class="nav-items-search">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search">
+                <div class="nav-items-logout" id="logout">
+                    <!-- <i class="fas fa-home"></i> -->
+                    <a href="/foodie/home.html"><span>Log out</span></a>
                 </div>
+                
             </div>
         </div>
     </header>
@@ -52,5 +54,18 @@
             <div id="percentage">10%</div>
         </div>
     </div>
+    <!-- <button style="display: flex; align-items: center; justify-content: center; padding: 5px; width: 100px; margin-right: 60px; margin-top: 30px;" type="submit">LOG OUT</button> -->
+    <script>
+
+document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            // Code to empty the cart
+            document.querySelector('.quantity').textContent = '0';
+            // Redirect to signup page
+            window.location.href = "/foodie/signup.html"; // Replace with your signup page URL
+        });
+   
+    </script>
+    <script src="./js/popup.js"></script>
 </body>
 </html>

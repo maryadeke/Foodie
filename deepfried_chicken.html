@@ -16,11 +16,11 @@
       <div class="nav-items">
         <div class="nav-items-home">
           <i class="fas fa-home"></i>
-          <a href="/home.html"><span>Home</span></a>
+          <a href="/foodie/home.html"><span>Home</span></a>
         </div>
         <div class="nav-items-cart">
           <i class="fas fa-shopping-cart"></i>
-          <a href="./cartSummary.html">Cart</a>
+          <a href="./foodie/cartSummary.html">Cart</a>
           <span class="quantity">0</span>
         </div>
         <div class="nav-items-search">
@@ -30,20 +30,26 @@
       </div>
     </div>
   </header>
-  <div class="cart_container" id="cart_container">
-    <div class="cart_container1">
-      <img id="item_image" src="./images/deepfried_chicken.jpg" alt=" deepfried chicken" />
+  <form action="/UserArena/menuProcess.php" method="POST">
+    <div class="cart_container" id="cart_container">
+      <div class="cart_container1">
+        <img id="item_image" src="./images/deepfried_chicken.jpg" alt="deepfried chicken" />
+      </div>
+      <div class="cart_container2">
+        <p>deepfried chicken</p>
+        <p>80g</p>
+        <p>UGX 30000</p>
+        <button type="submit" id="buttonContent" onclick="toggle2()">ADD TO CART</button>
+        <input type="hidden" name="foodName" id="foodName" value="deepfried chicken">
+        <input type="hidden" name="weight" id="weight" value="80g">
+        <input type="hidden" name="price" id="price" value="UGX 30000">
+        <input type="hidden" name="image" id="image" value="./images/deepfried_chicken.jpg">
+      </div>
     </div>
-    <div class="cart_container2">
-      <p>deepfried chicken</p>
-      <p>80g</p>
-      <p>UGX 30000</p>
-      <button type="submit" id="buttonContent" onclick="toggle2()">ADD TO CART</button>
+    <div class="popup">
+      <p id="popup_message">ITEM ADDED TO CART SUCCESSFULLY</p>
     </div>
-  </div>
-  <div class="popup">
-    <p id="popup_message">ITEM ADDED TO CART SUCCESSFULLY</p>
-  </div>
+  </form>
   <script src="./js/popup.js"></script>
 </body>
 </html>

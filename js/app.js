@@ -101,3 +101,4 @@ function updateCartDisplay() {
     // Update the cart summary
     updateCartSummary();
 }
+
